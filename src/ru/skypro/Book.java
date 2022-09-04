@@ -2,12 +2,12 @@ package ru.skypro;
 
 public class Book {
     private final String title;
-    private final Author authorFullName;
+    private final Author author;
     private int yearOfPublication;
 
-    public Book(String title, Author authorFullName, int yearOfPublication) {
+    public Book(String title, Author author, int yearOfPublication) {
         this.title = title;
-        this.authorFullName = authorFullName;
+        this.author = author;
         this.yearOfPublication = yearOfPublication;
     }
 
@@ -15,8 +15,8 @@ public class Book {
         return title;
     }
 
-    public Author getAuthorFullName() {
-        return authorFullName;
+    public Author getAuthor() {
+        return author;
     }
 
     public int getYearOfPublication() {
@@ -32,7 +32,7 @@ public class Book {
     }
 
     public void bookInfo(){
-        System.out.printf("Title: %s\nAuthor: %s\nYear of publishing: %s\n", title, authorFullName.getAuthorFullName(), yearOfPublication);
+        System.out.printf("Title: %s\nAuthor: %s\nYear of publishing: %s\n", title, author.getAuthorFullName(), yearOfPublication);
         System.out.println("========================");
     }
 }
